@@ -1,42 +1,27 @@
 /*
-Лабораторная работа 3
-Задание 1
-1
-запрашивает с клавиатуры два 
-целых числа, и выводит на экран 
-сумму данных чисел
+Лабораторная 3, задание 1, вариант 1
+Написать программу, которая, реализует диалог с
+пользователем:
+запрашивает с клавиатуры два
+целых числа, и выводит на экран
+сумму данных чисел:
 
 */
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp2
+class Program
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            try
-            {
-                int num_first, num_second, sum_num;
-                Console.WriteLine("Введите первое число: ");
-                num_first = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите второе число: ");
-                num_second = int.Parse(Console.ReadLine());
-                sum_num = num_first + num_second;
-                Console.WriteLine($"Сумма чисел {num_first} + {num_second} = {sum_num}");
-            }
-            catch(Exception e)
-            {
-                string message = e.Message;
-                Console.WriteLine("Ошибка: {0}", message);
-            }
-            Console.ReadKey();
-        }
+    static void Main() {
+        Console.Write("Введите первое целое число: ");
+        int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Введите второе целое число: ");
+        int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+        int sum = firstNumber + secondNumber;
+
+        Console.WriteLine($"Сумма {firstNumber} и {secondNumber} равна {sum}.");
     }
 }
